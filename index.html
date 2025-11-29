@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartBuy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              midnight: {
+                900: '#09090b', // Zinc 950
+                800: '#18181b', // Zinc 900
+                700: '#27272a', // Zinc 800
+              },
+              surface: {
+                DEFAULT: '#121215',
+                highlight: '#1c1c21',
+              },
+              primary: {
+                500: '#6366f1', // Indigo
+                600: '#4f46e5',
+              },
+              accent: {
+                500: '#8b5cf6', // Violet
+                400: '#a78bfa',
+              },
+              success: {
+                400: '#2dd4bf', // Teal
+                500: '#14b8a6',
+              }
+            },
+            boxShadow: {
+              'glow': '0 0 20px -5px rgba(99, 102, 241, 0.3)',
+              'glow-accent': '0 0 20px -5px rgba(139, 92, 246, 0.3)',
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'slide-up': 'slideUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<style>
+  /* Custom Scrollbar for a premium feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a; 
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46; 
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-midnight-900 text-zinc-200 antialiased min-h-screen selection:bg-primary-500/30 selection:text-primary-100">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

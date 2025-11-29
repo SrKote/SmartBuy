@@ -1,0 +1,5 @@
+{
+  "name": "SmartBuy",
+  "description": "Um consultor financeiro de alta precisão que analisa o custo de oportunidade de compras à vista vs parcelado com base nas taxas atuais de mercado.",
+  "requestFramePermissions": []
+}
